@@ -191,3 +191,9 @@ def delete_profile_photo(request):
         user.save()
         messages.success(request, 'Profile photo deleted successfully!')
     return redirect('profile')
+@login_required(login_url='login')
+def delete_account(request):
+    user = request.user
+    user.delete()
+    messages.success(request, 'Your account has been permanently deleted.')
+    return redirect('home')

@@ -17,6 +17,7 @@ urlpatterns = [
     path('logout/', views.user_logout, name='logout'),
     path('profile/', views.profile, name='profile'),
     path('profile/delete-photo/', views.delete_profile_photo, name='delete_profile_photo'),
+    path('profile/delete/', views.delete_account, name='delete_account'),
     path('send-verification-otp/', views.send_verification_otp, name='send_verification_otp'),
     
     # Password Reset
